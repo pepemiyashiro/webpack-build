@@ -4,7 +4,6 @@
   "description": "Webpack Build",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --port 3000 --hot --inline --open",
     "build": "webpack"
   },
   "repository": {
@@ -23,7 +22,6 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
     "html-webpack-plugin": "^2.24.0",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.2.0-rc.2"
   }
 }
