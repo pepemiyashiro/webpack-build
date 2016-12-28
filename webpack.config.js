@@ -2,19 +2,20 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  // entry : string | object | array
   entry : {
     bundle: './source/scripts/app.js'
   },
   
   output: {
+    // path : String - Target directory for output files
     path: path.join(__dirname, 'build/js'), 
-    // String - Target directory for output files
 
+    // publicPath: String - the url to the output directory resolved relative to the HTML page
     publicPath: '/js/', 
-    // String - the url to the output directory resolved relative to the HTML page
 
+    // filename: String - the filename template for entry chunks
     filename: '[name].js'
-    // String - the filename template for entry chunks
   },
 
   module: {
