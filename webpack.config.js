@@ -1,21 +1,31 @@
+const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
-  
-  entry: {
-    'build' : './source/scripts/app.js'
+  entry : {
+    bundle: './source/scripts/app.js'
   },
   
   output: {
-    path: './build/js',
+    path: path.join(__dirname, 'build/js'), 
+    // String - Target directory for output files
+
+    publicPath: '/js/', 
+    // String - the url to the output directory resolved relative to the HTML page
+
     filename: '[name].js'
+    // String - the filename template for entry chunks
   },
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015','stage-0']
+    rules: [
+      {
+        test: /\.js$/,
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] }
+        }],
       }
-    }]
+    ]
   }
 }
