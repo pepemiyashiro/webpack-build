@@ -1,9 +1,8 @@
 import {currentNumber, showNumber} from './ex-module';
+console.log('App.js Loaded as main dependency');
 
-
-const hi = 'Hello Webpack & Browser Sync';
+const hi = 'Hello Webpack & Browser Sync!';
 document.write(hi);
-console.log('App.js Loaded 2');
 
 /**
  * Module Example
