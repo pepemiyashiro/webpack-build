@@ -1,11 +1,11 @@
-const webpackEntrie = require('./webpack.entrie');
+const webpackEntry = require('./webpack.entry');
 const webpackModule = require('./webpack.module');
 const webpackOutput = require('./webpack.output');
 const webpackPlugins = require('./webpack.plugins');
 
 module.exports = {
   
-  entry : webpackEntrie,
+  entry : webpackEntry,
   
   output: webpackOutput,
 
@@ -14,4 +14,5 @@ module.exports = {
   devtool: 'source-map',
 
   plugins: webpackPlugins
+
 }

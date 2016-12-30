@@ -2,6 +2,8 @@
 const sourcePath = './source/scripts/';
 
 // entry : string | object | array
-module.exports = {
+let entryConfig = {
   scripts: sourcePath + 'app.js'
-};
+}
+
+module.exports = entryConfig;

@@ -1,4 +1,4 @@
-module.exports = {
+let moduleConfig = {
   rules: [
     {
       test: /\.js$/,
@@ -7,4 +7,6 @@ module.exports = {
       }],
     }
   ]
-}
+};
+
+module.exports = moduleConfig;

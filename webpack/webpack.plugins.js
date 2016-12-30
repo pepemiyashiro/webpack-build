@@ -1,6 +1,6 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-module.exports = [
+let pluginsConfig = [
   new BrowserSyncPlugin({
     // browse to http://localhost:3000/ during development, 
     // ./public directory is being served 
@@ -8,4 +8,7 @@ module.exports = [
     port: 3000,
     server: { baseDir: ['build'] }
   })
-]
+];
+
+
+module.exports = pluginsConfig;
