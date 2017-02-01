@@ -5,7 +5,13 @@ let moduleConfig = {
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ["es2015", "stage-0"]
+          presets: [
+            ["env", {
+              "targets": {
+                "browsers": ["last 2 versions", "safari >= 7"]
+              }
+            }]
+          ]
         }
       }],
     }
