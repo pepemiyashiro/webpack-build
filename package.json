@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install",
-    "dev": "node server",
-    "build": "webpack --config webpack"
+    "dev": "run-s clean build server",
+    "build" : "run-s build:*",
+    "build:html": "ncp source/templates build",
+    "build:scripts": "webpack --config webpack", 
+    "server": "node server",
+    "clean" : "rimraf build"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,7 @@
     "bs-fullscreen-message": "^1.1.0",
     "html-webpack-plugin": "^2.28.0",
     "ncp": "^2.0.0",
+    "npm-run-all": "^4.0.1",
     "rimraf": "^2.5.4",
     "strip-ansi": "^3.0.1",
     "webpack": "^2.2.1",
