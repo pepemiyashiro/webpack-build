@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install",
-    "dev": "run-s clean build && run-p server",
+    "dev": "run-s clean build && run-p lint:watch server",
     "build": "run-s build:*",
     "build:html": "ncp source/templates build",
     "build:scripts": "webpack --config webpack",
+    "lint:watch": "npm run lint -- --watch",
     "server": "node server",
     "clean": "rimraf build"
   },
@@ -30,6 +31,9 @@
     "browser-sync": "^2.18.7",
     "browser-sync-webpack-plugin": "^1.1.4",
     "bs-fullscreen-message": "^1.1.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-watch": "^2.1.14",
     "html-webpack-plugin": "^2.28.0",
     "ncp": "^2.0.0",
     "npm-run-all": "^4.0.1",
