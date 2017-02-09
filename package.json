@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install",
-    "dev": "run-s clean build server",
-    "build" : "run-s build:*",
+    "dev": "run-s clean build && run-p server",
+    "build": "run-s build:*",
     "build:html": "ncp source/templates build",
-    "build:scripts": "webpack --config webpack", 
+    "build:scripts": "webpack --config webpack",
     "server": "node server",
-    "clean" : "rimraf build"
+    "clean": "rimraf build"
   },
   "repository": {
     "type": "git",
