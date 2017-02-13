@@ -1,7 +1,13 @@
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const extractSass = new ExtractTextPlugin({
+//     filename: "[name].scss"
+// });
+
+
 
 let pluginsConfig = [
- // Add Plugins needed here
+  // Add Plugins needed here
+  // extractSass
 ];
 
 

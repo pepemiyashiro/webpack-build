@@ -1,6 +1,10 @@
 html {
   font-size: 16px;
 }
+
 body {
-  background-color: #fefefe;
+  background-color: #dedede;
+   * + * {
+     margin-bottom: 1em;
+   }
 }

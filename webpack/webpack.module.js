@@ -1,5 +1,6 @@
 let moduleConfig = {
   rules: [
+    //Javascript ES6 + Babel Env 
     {
       test: /\.js$/,
       use: [{
@@ -14,6 +15,14 @@ let moduleConfig = {
           ]
         }
       }],
+    },
+    {
+      test: /\.scss$/,
+      use: [
+        { loader: "style-loader" },
+        { loader: "css-loader" },
+        { loader: "sass-loader" }
+      ]
     }
   ]
 };
