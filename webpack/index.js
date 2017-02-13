@@ -5,13 +5,13 @@ const webpackPlugins = require('./webpack.plugins');
 
 module.exports = {
   
+  devtool: 'source-map',
+
   entry : webpackEntry,
   
   output: webpackOutput,
 
   module: webpackModule,
-
-  devtool: 'source-map',
 
   plugins: webpackPlugins
 

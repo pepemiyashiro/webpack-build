@@ -1,4 +1,4 @@
-import {currentNumber, showNumber} from './ex-module';
+import {currentNumber, showNumber} from '../module-example/ex-module';
 console.log('App.js Loaded as main dependency');
 
 const hi = 'Hello Webpack & Browser Sync!';
