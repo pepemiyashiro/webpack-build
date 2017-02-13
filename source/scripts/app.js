@@ -8,11 +8,11 @@ document.write(hi);
  * Module Example
  */
 
- console.log('exampleModule.currentNumber : ' , currentNumber);;
+ console.log('exampleModule.currentNumber : ' , currentNumber);
  showNumber();
 
 
-(_ => console.log("Hi I'm an IIFE") )();
+(() => console.log("Hi I'm an IIFE") )();
 
 
 
@@ -26,7 +26,7 @@ const isGreaterThanCero = number => ( (number > 0) ? true : false );
 
 console.log( isGreaterThanCero('Soy Foo'), typeof isGreaterThanCero('Soy Foo') );
 
-const reducedArry = [0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) => accumulator + currentValue );
+const reducedArry = [0, 1, 2, 3, 4].reduce( (accumulator, currentValue ) => accumulator + currentValue );
 
 console.log(reducedArry);
 
