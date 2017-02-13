@@ -1,9 +1,9 @@
 // Define the source path to the scripts folder
-const sourcePath = './source/scripts/';
+const sourcePath = './source/components';
 
 // entry : string | object | array
 let entryConfig = {
-  scripts: sourcePath + 'app.js'
+  main: `${sourcePath}/main/main.js`
 }
 
 module.exports = entryConfig;
