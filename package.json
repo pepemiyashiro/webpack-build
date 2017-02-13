@@ -4,7 +4,7 @@
   "description": "Webpack Build",
   "main": "index.js",
   "scripts": {
-    "start": "npm install",
+    "start": "run-s dependencies dev",
     "dev": "run-s clean build && run-p lint:watch server",
     "build": "run-s build:*",
     "build:html": "ncp source/templates build",
@@ -12,7 +12,8 @@
     "lint": "esw webpack/index.js source/scripts build --color",
     "lint:watch": "npm run lint -- --watch",
     "server": "node server",
-    "clean": "rimraf build"
+    "clean": "rimraf build",
+    "dependencies" : "npm install"
   },
   "repository": {
     "type": "git",
