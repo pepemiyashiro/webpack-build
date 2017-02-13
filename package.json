@@ -13,7 +13,7 @@
     "lint:watch": "npm run lint -- --watch",
     "server": "node server",
     "clean": "rimraf build",
-    "dependencies" : "npm install"
+    "dependencies": "npm install"
   },
   "repository": {
     "type": "git",
@@ -33,14 +33,19 @@
     "browser-sync": "^2.18.7",
     "browser-sync-webpack-plugin": "^1.1.4",
     "bs-fullscreen-message": "^1.1.0",
+    "css-loader": "^0.26.1",
     "eslint": "^3.15.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-watch": "^2.1.14",
+    "extract-text-webpack-plugin": "^2.0.0-rc.1",
     "html-webpack-plugin": "^2.28.0",
     "ncp": "^2.0.0",
+    "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.1",
     "rimraf": "^2.5.4",
+    "sass-loader": "^5.0.1",
     "strip-ansi": "^3.0.1",
+    "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0"
   }

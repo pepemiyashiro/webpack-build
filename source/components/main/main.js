@@ -1,3 +1,6 @@
+// Styles
+import './main.scss';
+
 import {currentNumber, showNumber} from '../module-example/ex-module';
 console.log('App.js Loaded as main dependency');
 
