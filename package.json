@@ -9,7 +9,7 @@
     "build": "run-s build:*",
     "build:html": "ncp source/templates build",
     "build:scripts": "webpack --config webpack",
-    "lint": "esw webpack/index.js source/scripts build --color",
+    "lint": "esw source/components --color",
     "lint:watch": "npm run lint -- --watch",
     "server": "node server",
     "clean": "rimraf build",
