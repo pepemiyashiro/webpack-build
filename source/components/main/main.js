@@ -15,7 +15,7 @@ document.write(hi);
  showNumber();
 
 
-(() => console.log("Hi I'm an IIFE") )();
+(() => console.log("Hi I'm an iife") )();
 
 
 

@@ -1,4 +1,6 @@
-let moduleConfig = {
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const moduleConfig = {
   rules: [
     //Javascript ES6 + Babel Env 
     {
@@ -7,9 +9,9 @@ let moduleConfig = {
         loader: 'babel-loader',
         options: {
           presets: [
-            ["env", {
-              "targets": {
-                "browsers": ["last 2 versions", "safari >= 7"]
+            ['env', {
+              'targets': {
+                'browsers': ['last 2 versions', 'safari >= 7']
               }
             }]
           ]
@@ -18,11 +20,10 @@ let moduleConfig = {
     },
     {
       test: /\.scss$/,
-      use: [
-        { loader: "style-loader" },
-        { loader: "css-loader" },
-        { loader: "sass-loader" }
-      ]
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'sass-loader']
+      })
     }
   ]
 };
