@@ -4,8 +4,8 @@ import './main.scss';
 import {currentNumber, showNumber} from '../module-example/ex-module';
 console.log('App.js Loaded as main dependency');
 
-const hi = 'Hello Webpack & Browser Sync!';
-document.write(hi);
+const hi = 'Hello Webpack & Browser Sync?';
+document.write(`<h2>${hi}</h2>`);
 
 /**
  * Module Example
@@ -38,4 +38,4 @@ function defaultValues( a = 'First', b = 'Second') {
   return a + b;
 }
 
-console.log( defaultValues('todo','nadass') );
+console.log( defaultValues('todo','nadas') );

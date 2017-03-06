@@ -4,15 +4,17 @@
   "description": "Webpack Build",
   "main": "index.js",
   "scripts": {
-    "start": "run-s dependencies dev",
-    "dev": "run-s clean build && run-p lint:watch server",
+    "start": "run-s clean dependencies dev",
+    "start:clean": "run-s clean:all dependencies build",
+    "dev": "run-s clean build && run-p watch:*",
     "build": "run-s build:*",
     "build:html": "ncp source/templates build",
     "build:scripts": "webpack --config webpack",
     "lint": "esw source/components --color",
-    "lint:watch": "npm run lint -- --watch",
-    "server": "node server",
+    "watch:lint": "npm run lint -- --watch",
+    "watch:scripts": "webpack --config webpack --watch",
     "clean": "rimraf build",
+    "clean:all": "rimraf build node_modules",
     "dependencies": "npm install"
   },
   "repository": {
@@ -32,7 +34,6 @@
     "babel-preset-env": "^1.1.8",
     "browser-sync": "^2.18.7",
     "browser-sync-webpack-plugin": "^1.1.4",
-    "bs-fullscreen-message": "^1.1.0",
     "css-loader": "^0.26.1",
     "eslint": "^3.15.0",
     "eslint-plugin-import": "^2.2.0",
@@ -46,7 +47,6 @@
     "sass-loader": "^5.0.1",
     "strip-ansi": "^3.0.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.10.0"
+    "webpack": "^2.2.1"
   }
 }
